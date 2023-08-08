@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "722867479004",
+    "project_id": "otonomusproject",
+    "storage_bucket": "otonomusproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722867479004:android:643a6cc78131e7658a2f19",
+        "android_client_info": {
+          "package_name": "com.example.otonomus_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722867479004-fth47aprbvuicso356mgvcnh9021sgh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEGE-6SK5uvWilvnzmvc2brtq2T7sILcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722867479004-fth47aprbvuicso356mgvcnh9021sgh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722867479004:android:b9195e594c2afad78a2f19",
+        "android_client_info": {
+          "package_name": "com.example.task7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722867479004-fth47aprbvuicso356mgvcnh9021sgh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEGE-6SK5uvWilvnzmvc2brtq2T7sILcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722867479004-fth47aprbvuicso356mgvcnh9021sgh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
