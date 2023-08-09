@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task7/Provider/list_property_provider.dart';
 import 'package:task7/models/PropertyModel.dart';
-import 'package:task7/presentation/shared_widgets/customDropDownButton.dart';
+import 'package:task7/presentation/shared_widgets/custom_drop_down_button.dart';
 import 'package:task7/presentation/shared_widgets/display_card.dart';
 import 'package:task7/presentation/shared_widgets/side_drawer.dart';
 import 'package:provider/provider.dart';
@@ -23,7 +23,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
   }
 
   void initiate() async {
-    await Provider.of<listPropertyProvider>(context, listen: false)
+    await Provider.of<ListPropertyProvider>(context, listen: false)
         .fetchProperty();
   }
 
@@ -31,13 +31,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
 
   @override
   Widget build(BuildContext context) {
-    listPropertyProvider listProvider =
-        Provider.of<listPropertyProvider>(context, listen: true);
+    ListPropertyProvider listProvider =
+        Provider.of<ListPropertyProvider>(context, listen: true);
     TextStyle HintTextStyle =
         TextStyle(fontFamily: "MontserratRegular", fontSize: 12);
     return Scaffold(
       key: _scaffoldKey,
-      drawer: sideDrawer(),
+      drawer: SideDrawer(),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           shape: RoundedRectangleBorder(

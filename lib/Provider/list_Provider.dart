@@ -6,7 +6,7 @@ import 'package:task7/models/CountryModel.dart';
 import 'package:http/http.dart' as http;
 import 'package:task7/models/LanguageModel.dart';
 import 'package:task7/models/StatesModel.dart';
-import 'package:task7/service/CompleteProfileService.dart';
+import 'package:task7/service/complete_profile_service.dart';
 
 class ListProvider with ChangeNotifier {
   List<CountryModel> _listCountry = [];

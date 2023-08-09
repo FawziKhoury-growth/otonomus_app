@@ -19,5 +19,9 @@ class RouteNavigator{
       arguments: arguments,
     );
   }
+
+  static void goToFirst (){
+    RouteGenerator.navigatorKey.currentState?.popUntil((route) => route.isFirst);
+  }
 }
 

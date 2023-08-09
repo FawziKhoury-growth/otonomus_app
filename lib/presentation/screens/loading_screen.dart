@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task7/Provider/current_user_provider.dart';
-import 'package:task7/presentation/screens/property_display.dart';
+import 'package:task7/presentation/screens/home_page_screen.dart';
 import 'package:task7/service/firebase_helper.dart';
 import '../../navigator/route_navigator.dart';
 
@@ -13,7 +13,7 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen> {
-  firebase_helper firebaseHelper = firebase_helper();
+  FirebaseHelper firebaseHelper = FirebaseHelper();
   @override
   void initState() {
     super.initState();
@@ -24,8 +24,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   void initDatabase() {
     Future.delayed(Duration.zero, () async {     
-      await Provider.of<CurrentUser>(context, listen: false).fetchUser();
-      RouteNavigator.goTo("home");
+      await Provider.of<CurrentUserProvider>(context, listen: false).fetchUser();
+      RouteNavigator.goTo("");
     });
   }
 
@@ -34,7 +34,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       body: Center(child: Column(
         children: [
-          Image.asset('assets/images/loadingScreen.jpg', height: 500, width: 400,),
+          // Image.asset('assets/images/loadingScreen.jpg', height: 500, width: 400,),
+          Image.network("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"),
           Text("drferfderfd")
         ],
       )),

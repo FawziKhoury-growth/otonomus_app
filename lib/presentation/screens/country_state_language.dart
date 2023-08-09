@@ -7,7 +7,7 @@ import 'package:task7/models/StatesModel.dart';
 import 'package:task7/navigator/route_generator.dart';
 import 'package:task7/navigator/route_navigator.dart';
 import 'package:task7/presentation/screens/DisplayCountry.dart';
-import 'package:task7/presentation/shared_widgets/Button.dart';
+import 'package:task7/presentation/shared_widgets/custom_button_widget.dart';
 import 'package:provider/provider.dart';
 
 class ProfileUI extends StatefulWidget {
@@ -242,7 +242,7 @@ class _ProfileUIState extends State<ProfileUI> {
             SizedBox(
               height: 30,
             ),
-            CustomButton(
+            CustomButtonWidget(
                 title: "Display Item",
                 icon: Icon(Icons.arrow_forward),
                 color: Colors.blue,

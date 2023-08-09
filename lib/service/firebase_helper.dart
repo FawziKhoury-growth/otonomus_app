@@ -6,8 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:task7/Provider/current_user_provider.dart';
 import 'package:task7/models/UserModel.dart';
 
-class firebase_helper {
-  Future<void> signUpWithEmailPassword(String firstName, String lastName, String email, String password, context) async {
+class FirebaseHelper {
+  Future<void> signUpWithEmailPassword(String firstName, String lastName, String email, String password) async {
     try {
       UserCredential userCredential =
           await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -92,7 +92,7 @@ Future<UserModel?> checkUser() async {
 Future<void> signOutUser(context) async {
   try {
     await FirebaseAuth.instance.signOut();
-    await Provider.of<CurrentUser>(context,listen: false).fetchUser();
+    await Provider.of<CurrentUserProvider>(context,listen: false).fetchUser();
     print('User logged out');
   } catch (e) {
     print('Error logging out: $e');

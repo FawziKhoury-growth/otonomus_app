@@ -18,9 +18,9 @@ class CustomDropDownButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    listPropertyProvider? listProvider;
+    ListPropertyProvider? listProvider;
     if(display){
-      listProvider=Provider.of<listPropertyProvider>(context, listen: true);
+      listProvider=Provider.of<ListPropertyProvider>(context, listen: true);
     }
    
     return Container(

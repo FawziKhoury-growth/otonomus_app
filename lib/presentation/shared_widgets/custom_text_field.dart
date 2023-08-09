@@ -6,14 +6,14 @@ class CustomTextField extends StatefulWidget {
   final String hintText;
   final TextInputType? keyboardType;
   bool obscureText;
- bool customObscureText = false;
+ bool customObscureText =true;
 
   CustomTextField({
     required this.controller,
     required this.hintText,
     this.keyboardType,
     this.obscureText = false,
-    
+  
   });
     
   @override
@@ -21,11 +21,8 @@ class CustomTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
-  @override
-  void initState() {
-    // TODO: implement initState
-     widget.customObscureText=widget.obscureText;
-  }
+  
+
   @override
   Widget build(BuildContext context) {
     
@@ -50,7 +47,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                     color: Color(0xFF323E48))),
             TextField(
               controller: widget.controller,
-              obscureText: widget.customObscureText,
+              obscureText: widget.obscureText ? widget.customObscureText : widget.obscureText,
               keyboardType: widget.keyboardType,
               style: TextStyle(
                   fontFamily: "MontserratMedium",

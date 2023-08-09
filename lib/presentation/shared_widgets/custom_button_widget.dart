@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButtonWidget extends StatelessWidget {
   final String title;
   final Icon? icon;
   final Color color;
@@ -8,7 +8,7 @@ class CustomButton extends StatelessWidget {
   final double? radius;
   final VoidCallback onPressed;
 
-  const CustomButton({
+  const CustomButtonWidget({
     required this.title,
     this.icon,
     required this.color,

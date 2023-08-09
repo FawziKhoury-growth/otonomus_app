@@ -3,7 +3,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:task7/Provider/list_property_provider.dart';
 import 'package:task7/models/PropertyModel.dart';
-import 'package:task7/presentation/shared_widgets/Button.dart';
+import 'package:task7/presentation/shared_widgets/custom_button_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:svg_icon/svg_icon.dart';
 
@@ -57,7 +57,7 @@ class _DisplayCardState extends State<DisplayCard> {
                     viewportFraction: 1.0,
                     enableInfiniteScroll: false,
                     onPageChanged: (index, reason) => {
-                      Provider.of<listPropertyProvider>(context, listen: false)
+                      Provider.of<ListPropertyProvider>(context, listen: false)
                           .setCurrentIndex(widget.availableSpace!, index)
                     },
                   ),

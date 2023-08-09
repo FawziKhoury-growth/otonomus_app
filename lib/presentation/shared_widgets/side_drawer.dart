@@ -5,13 +5,13 @@ import 'package:task7/models/UserModel.dart';
 import 'package:task7/navigator/route_navigator.dart';
 import 'package:task7/service/firebase_helper.dart';
 
-class sideDrawer extends StatelessWidget {
-  const sideDrawer({super.key});
+class SideDrawer extends StatelessWidget {
+  const SideDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
     UserModel? userProvider =
-        Provider.of<CurrentUser>(context, listen: true).user;
+        Provider.of<CurrentUserProvider>(context, listen: true).user;
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -40,7 +40,7 @@ class sideDrawer extends StatelessWidget {
                   ListTile(
                     title: const Text('Sign Out'),
                     onTap: () async{
-                      await firebase_helper().signOutUser(context);
+                      await FirebaseHelper().signOutUser(context);
                       
                       Navigator.pop(context);
                     },

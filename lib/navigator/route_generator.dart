@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:task7/presentation/screens/loadingScreen.dart';
+import 'package:task7/presentation/screens/loading_screen.dart';
 
-import '../presentation/screens/loginPage.dart';
-import '../presentation/screens/property_display.dart';
-import '../presentation/screens/signUpPage.dart';
+import '../presentation/screens/login_page.dart';
+import '../presentation/screens/home_page_screen.dart';
+import '../presentation/screens/signup_page.dart';
 
 
 
@@ -16,12 +16,12 @@ class RouteGenerator{
     final String routeName = settings.name!;
 
     switch (routeName){
-      case '/home' :
+      case '/' :
         return MaterialPageRoute(builder: (_) => HomePageScreen());
       case '/login' :
         return MaterialPageRoute(builder: (_) => LoginPage());
       case '/signup' : 
-        return MaterialPageRoute(builder: (_) => signUpPage());
+        return MaterialPageRoute(builder: (_) => SignUpPage());
       case '/loadingScreen' : 
         return MaterialPageRoute(builder: (_) => LoadingScreen());
       default:

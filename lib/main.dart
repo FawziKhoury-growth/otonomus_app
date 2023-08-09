@@ -1,12 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:task7/Provider/current_user_provider.dart';
-import 'package:task7/presentation/screens/signUpPage.dart';
+import 'package:task7/presentation/screens/signup_page.dart';
 import 'package:task7/Provider/list_Provider.dart';
 import 'package:task7/Provider/list_property_provider.dart';
 import 'package:task7/presentation/screens/country_state_language.dart';
-import 'package:task7/presentation/screens/loginPage.dart';
-import 'package:task7/presentation/screens/property_display.dart';
+import 'package:task7/presentation/screens/login_page.dart';
+import 'package:task7/presentation/screens/home_page_screen.dart';
 
 import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -20,8 +20,8 @@ void main() async{
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ListProvider(),),
-        ChangeNotifierProvider(create: (context) => listPropertyProvider(),),
-        ChangeNotifierProvider(create: (context) => CurrentUser(),),
+        ChangeNotifierProvider(create: (context) => ListPropertyProvider(),),
+        ChangeNotifierProvider(create: (context) => CurrentUserProvider(),),
       
 
       ],

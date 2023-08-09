@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task7/models/PropertyModel.dart';
 import 'package:task7/service/property_service.dart';
 
-class listPropertyProvider with ChangeNotifier{
+class ListPropertyProvider with ChangeNotifier{
   List<PropertyModel> _listProperty = [];
 
   PropertyModel? selectedProperty ;
